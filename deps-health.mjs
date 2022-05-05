@@ -18,17 +18,24 @@ for (const [depName, depDetails] of Object.entries(input)) {
   const diff = semverDiff(depDetails.current, depDetails.latest)
   outdatedDeps++
   if (diff === "patch") {
-    outdatedScore += 0.2
+    outdatedScore += 0.1
     outdatedPatch++
   } else if (diff === "minor") {
-    outdatedScore += 0.5
+    outdatedScore += 0.25
     outdatedMinor++
   } else if (diff === "major") {
     outdatedScore += 1
     outdatedMajor++
+    console.log(
+      "Outdated major dep:",
+      depName,
+      depDetails.current,
+      depDetails.latest
+    )
   }
 }
 
+console.log("\n========== SUMMARY ==========")
 console.log("Dependencies count:", depsCount)
 console.log(
   "Outdated deps:",
