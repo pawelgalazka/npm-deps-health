@@ -1,6 +1,6 @@
 {
   "name": "deps-health",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Checks how much outdated your npm dependencies are",
   "bin": {
     "deps-health": "./deps-health.mjs"
