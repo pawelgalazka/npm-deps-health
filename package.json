@@ -1,0 +1,29 @@
+{
+  "name": "deps-health",
+  "version": "1.0.0-alpha.1",
+  "description": "Checks how much outdated your npm dependencies are",
+  "bin": {
+    "deps-health": "./deps-health.mjs"
+  },
+  "scripts": {
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawelgalazka/npm-deps-health.git"
+  },
+  "author": "Pawel Galazka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pawelgalazka/npm-deps-health/issues"
+  },
+  "homepage": "https://github.com/pawelgalazka/npm-deps-health#readme",
+  "devDependencies": {
+    "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "semver-diff": "^4.0.0"
+  }
+}
