@@ -42,9 +42,21 @@ console.log(
   outdatedDeps,
   `(${Math.round((outdatedDeps / depsCount) * 100)}%)`
 )
-console.log("Outdated patch deps:", outdatedPatch)
-console.log("Outdated minor deps:", outdatedMinor)
-console.log("Outdated major deps:", outdatedMajor)
+console.log(
+  "Outdated patch deps:",
+  outdatedPatch,
+  `(${Math.round((outdatedPatch / depsCount) * 100)}%)`
+)
+console.log(
+  "Outdated minor deps:",
+  outdatedMinor,
+  `(${Math.round((outdatedMinor / depsCount) * 100)}%)`
+)
+console.log(
+  "Outdated major deps:",
+  outdatedMajor,
+  `(${Math.round((outdatedMajor / depsCount) * 100)}%)`
+)
 console.log(
   "Deps health score:",
   Math.round(((depsCount - outdatedScore) / depsCount) * 100),
