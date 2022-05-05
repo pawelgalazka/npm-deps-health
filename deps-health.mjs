@@ -6,7 +6,8 @@ const pck = JSON.parse(fs.readFileSync("./package.json"))
 const input = JSON.parse(fs.readFileSync(0, "utf-8"))
 
 const depsCount =
-  Object.keys(pck.dependencies).length + Object.keys(pck.devDependencies).length
+  Object.keys(pck.dependencies || {}).length +
+  Object.keys(pck.devDependencies || {}).length
 
 let outdatedScore = 0
 let outdatedPatch = 0
